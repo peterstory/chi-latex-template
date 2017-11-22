@@ -1,0 +1,131 @@
+\documentclass{sigchi}
+
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{csquotes}
+
+% Use this command to override the default ACM copyright statement
+% (e.g. for preprints).  Consult the conference website for the
+% camera-ready copyright statement.
+
+%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+\toappear{TODO WRITE WHAT THIS IS FOR. November 2017.}
+% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+
+% Arabic page numbers for submission.  Remove this line to eliminate
+% page numbers for the camera ready copy
+\pagenumbering{arabic}
+
+% Load basic packages
+\usepackage{balance}  % to better equalize the last page
+\usepackage{graphics} % for EPS, load graphicx instead
+\usepackage[T1]{fontenc}
+\usepackage{txfonts}
+\usepackage{mathptmx}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{textcomp}
+% Some optional stuff you might like/need.
+\usepackage{microtype} % Improved Tracking and Kerning
+\usepackage{ccicons}  % Cite your images correctly!
+% \usepackage[utf8]{inputenc} % for a UTF8 editor only
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+
+% If you want to use todo notes, marginpars etc. during creation of your draft document, you
+% have to enable the "chi_draft" option for the document class. To do this, change the very first
+% line to: "\documentclass[chi_draft]{sigchi}". You can then place todo notes by using the "\todo{...}"
+% command. Make sure to disable the draft option again before submitting your final document.
+\usepackage{todonotes}
+
+% Paper metadata (use plain text, for PDF inclusion and later
+% re-using, if desired).  Use \emtpyauthor when submitting for review
+% so you remain anonymous.
+\def\plaintitle{TODO Write your title here}
+\def\plainauthor{First Author, Second Author, Third Author,
+  Fourth Author, Fifth Author, Sixth Author}
+\def\emptyauthor{}
+% Got the keywords from this document:
+% https://www.ieee.org/documents/taxonomy_v101.pdf
+\def\plainkeywords{TODO WRITE KEYWORDS}
+\def\plaingeneralterms{Documentation, Standardization}
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{
+    \def\UrlFont{\sf}
+  }{
+    \def\UrlFont{\small\bf\ttfamily}
+  }}
+\makeatother
+\urlstyle{leo}
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, to give it a
+% fighting chance of not being over-written, since its job is to
+% redefine many LaTeX commands.
+\definecolor{linkColor}{RGB}{6,125,233}
+\hypersetup{%
+  pdftitle={\plaintitle},
+% Use \plainauthor for final version.
+%  pdfauthor={\plainauthor},
+  pdfauthor={\emptyauthor},
+  pdfkeywords={\plainkeywords},
+  bookmarksnumbered,
+  pdfstartview={FitH},
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=linkColor,
+  breaklinks=true,
+}
+
+% create a shortcut to typeset table headings
+% \newcommand\tabhead[1]{\small\textbf{#1}}
+
+% End of preamble. Here it comes the document.
+\begin{document}
+
+\title{\plaintitle}
+
+\numberofauthors{2}
+\author{
+  \alignauthor{Peter Story\\
+    \affaddr{Institute for Software Research}\\
+    \affaddr{Carnegie Mellon University, Pittsburgh USA}\\
+    \email{pstory@andrew.cmu.edu}}\\
+  \alignauthor{AUTHOR 2\\
+    \affaddr{AUTHOR 2 AFFILIATION}\\
+    \affaddr{AUTHOR 2 AFFILIATION}\\
+    \email{AUTHOR 2 EMAIL}}\\
+}
+
+\maketitle
+
+\begin{abstract}
+TODO Write an abstract
+\end{abstract}
+
+%\category{H.5.m.}{Information Interfaces and Presentation
+%  (e.g. HCI)}{Miscellaneous} \category{See
+%  \url{http://acm.org/about/class/1998/} for the full list of ACM
+%  classifiers. This section is required.}{}{}
+
+\keywords{\plainkeywords}
+
+\input{introduction}
+\input{litreview}
+\newpage
+\bibliography{bibliography}
+\bibliographystyle{SIGCHI-Reference-Format}
+\end{document}

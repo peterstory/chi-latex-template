@@ -1,0 +1,13 @@
+# Files created by MacOS Finder
+.DS_Store
+
+# Temporary files created during the LaTeX build process
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.out
+
+# Build products shouldn't be checked into Git
+*.pdf
